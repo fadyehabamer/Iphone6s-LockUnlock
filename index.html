@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<style type="text/css">
+		.iphone {
+			width: 500px;
+			margin-left: 400px;
+		}
+
+		.lighton {
+			position: fixed;
+			top: 439px;
+			left: 622px;
+			opacity: 0;
+		}
+
+		.lightoff {
+
+			position: fixed;
+			top: 128px;
+			left: 727px;
+			opacity: 0;
+
+		}
+	</style>
+
+	<script type="text/javascript">
+		function light(sw) {
+
+			var pic;
+
+			if (sw == 0) {
+
+				pic = "iphoneoff.png"
+
+			} else {
+
+				pic = "iphoneon.png"
+			}
+
+			document.getElementById('iphone').src = pic;
+
+
+		}
+	</script>
+
+
+
+</head>
+
+<body>
+
+
+	<img src="iphoneoff.png" class="iphone" id="iphone">
+
+	<button type="button" class="lighton" onclick=light(1)>Light On</button>
+	<button type="button" class="lightoff" onclick=light(0)>Light Off</button>
+
+</body>
+
+</html>
